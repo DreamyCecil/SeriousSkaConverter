@@ -38,12 +38,12 @@ File formats to associate with specific conversion methods:
 -fixscale -fixdir -fixanim -base <main mesh file>.smd
 ```
 3. When you get prompted with `Specify SMD model file that this animation is for:` upon converting an SMD file with an animation and don't specify any model, it will default to `!Base.smd` file that you can place near the file that's being opened that will be used as the "base" model. This is the same model as in the `-base` launch argument.
-4. You can create a `!AnimInfo.json` file near the file that's being opened for specifying custom properties for specific SMD animation files. By default, converted animations have the same name as the SMD file they were created from and 30 FPS as the fixed animation speed. These properties can be overriden as such:
+4. You can create a `!AnimInfo.json` file near the file that's being opened for specifying custom properties for specific SMD animation files. By default, converted animations have the same name as the SMD file they were created from and 24 FPS as the fixed animation speed (Source's default framerate). These properties can be overriden as such:
 ```json
 {
   "run.smd" : {
     "name" : "Run",
-    "fps" : 25,
+    "fps" : 30,
   },
 }
 ```
